@@ -3,7 +3,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 li {
@@ -37,10 +38,17 @@ body {
 }
 
 #root {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   min-height: 100vh;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .container {
@@ -70,6 +78,8 @@ body {
 .btn:active {
   color: white;
   background-color: rgb(22, 53, 192);
+  -webkit-transition: all 0.3;
+  -o-transition: all 0.3;
   transition: all 0.3;
 }
 textarea {
@@ -85,16 +95,28 @@ textarea {
 
 .header__container,
 .footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 60px;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0 -8px;
 }
@@ -112,6 +134,8 @@ textarea {
 .menu__link:focus,
 .menu__link:active {
   color: white;
+  -webkit-transition: all 0.3;
+  -o-transition: all 0.3;
   transition: all 0.3;
 }
 .active {
@@ -152,23 +176,32 @@ textarea {
 }
 
 .burger.active-burger span {
-  transform: scale(0);
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
 }
 .burger.active-burger::before {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
   top: 40%;
 }
 
 .burger.active-burger::after {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
   bottom: 50%;
 }
 
 /* main */
 
 .btn-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin: 0 -10px;
 }
 .btn-list .btn {
@@ -193,12 +226,18 @@ textarea {
   padding: 20px 0;
 }
 .note__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .note__form button{
   width: 120px;
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   margin-top: 10px;
 }
 
@@ -211,12 +250,18 @@ textarea {
 /* create */
 
 .create__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .create__form button{
   width: 100px;
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   margin-top: 10px;
 }
 
@@ -227,7 +272,9 @@ textarea {
 
 /* footer */
 .footer__container {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (max-width: 480px) {
@@ -243,14 +290,22 @@ textarea {
     right: 0;
     bottom: 0;
     z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 60px 0;
     height: 100vh;
     width: 100vw;
     margin: 0;
-    justify-content: space-around;   
+    -ms-flex-pack: distribute;
+        justify-content: space-around;   
   }
   .menu__list.active-menu {
       top: 0;
